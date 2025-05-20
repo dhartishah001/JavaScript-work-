@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Check if a number is positive or negative
+let num1 = -5;
+console.log("1:", num1 >= 0 ? "Positive" : "Negative");
+
+// 2. Even or Odd Checker
+let num2 = 4;
+console.log("2 :", num2 % 2 === 0 ? "Even" : "Odd");
+
+// 3. Find the largest of two numbers
+let a = 10, b = 20;
+console.log("3:", a > b ? a : b);
+
+// 4. Check if a number is divisible by 5
+let num3 = 25;
+console.log("4:", num3 % 5 === 0 ? "Divisible by 5" : "Not divisible by 5");
+
+// 5. Check if a year is a Leap Year
+let year = 2024;
+console.log("5:", (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) ? "Leap Year" : "Not Leap Year");
+
+// 6. Voting Eligibility
+let age = 18;
+console.log("6:", age >= 18 ? "Eligible to vote" : "Not eligible");
+
+// 7. Grade Calculator
+let marks = 85;
+let grade;
+if (marks >= 90) grade = "A";
+else if (marks >= 80) grade = "B";
+else if (marks >= 70) grade = "C";
+else if (marks >= 60) grade = "D";
+else grade = "F";
+console.log("7:", "Grade is", grade);
+
+// 8. Temperature Checker
+let temp = 30;
+if (temp > 40) console.log("8: Very Hot");
+else if (temp > 30) console.log("8: Hot");
+else if (temp > 20) console.log("8: Warm");
+else console.log("8: Cold");
+
+// 9. Check if character is vowel or consonant
+let char = 'e';
+char = char.toLowerCase();
+console.log("9:", ["a", "e", "i", "o", "u"].includes(char) ? "Vowel" : "Consonant");
+
+// 10. Simple Calculator using if-else
+let n1 = 10, n2 = 5, operator = '+';
+let result;
+if (operator === '+') result = n1 + n2;
+else if (operator === '-') result = n1 - n2;
+else if (operator === '*') result = n1 * n2;
+else if (operator === '/') result = n1 / n2;
+else result = "Invalid operator";
+console.log("10:", result);
+
+// 11. Find the largest of three numbers
+let x = 12, y = 45, z = 30;
+let largest = (x > y && x > z) ? x : (y > z ? y : z);
+console.log("11:", largest);
+
+// 12. Number Range Checker (1-100)
+let checkNum = 55;
+console.log("12:", checkNum >= 1 && checkNum <= 100 ? "In range" : "Out of range");
+
+// 13. Day of the week using switch-case
+let day = 3;
+let dayName;
+switch(day) {
+  case 1: dayName = "Monday"; break;
+  case 2: dayName = "Tuesday"; break;
+  case 3: dayName = "Wednesday"; break;
+  case 4: dayName = "Thursday"; break;
+  case 5: dayName = "Friday"; break;
+  case 6: dayName = "Saturday"; break;
+  case 7: dayName = "Sunday"; break;
+  default: dayName = "Invalid day";
+}
+console.log("13:", dayName);
+
+// 14. Check if number is multiple of 3 and 5 (FizzBuzz)
+let fizzNum = 15;
+if (fizzNum % 3 === 0 && fizzNum % 5 === 0) console.log("14: FizzBuzz");
+else if (fizzNum % 3 === 0) console.log("14: Fizz");
+else if (fizzNum % 5 === 0) console.log("14: Buzz");
+else console.log("14:", fizzNum);
+
+// 15. Student Pass or Fail
+let score = 40;
+console.log("15:", score >= 33 ? "Pass" : "Fail");
+
+// 16. Check for uppercase or lowercase
+let letter = 'G';
+console.log("16:", letter === letter.toUpperCase() ? "Uppercase" : "Lowercase");
+
+// 17. Calculate Bonus Based on Salary
+let salary = 25000;
+let bonus = salary > 20000 ? salary * 0.1 : salary * 0.05;
+console.log("17: Bonus =", bonus);
+
+// 18. Simple Traffic Light Simulation
+let light = "Red";
+
+
+
+// 19. Odd/Even using switch
+let oeNum = 7;
+
+
+// 20. Check Password Strength
+let password = "StrongPass123!";
+
+
+
+    </script>
+</body>
+</html>

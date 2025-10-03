@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS PDF Generator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<h1>JavaScript – Basic Guide</h1>
+
+<button id="download">Download PDF</button>
+
+<script>
+  const { jsPDF } = window.jspdf;
+
+  const content = `
+JavaScript – Basic Guide (One Day Preparation)
+
+1. Introduction
+- JavaScript (JS) is a high-level, interpreted language.
+- Runs on browser and server (Node.js).
+- Used for dynamic content, DOM manipulation, events.
+- Data Types: Number, String, Boolean, Undefined, Null, Symbol, Object.
+
+2. Variables
+Type  Scope     Reassignable  Hoisting
+var   function  yes           yes
+let   block     yes           no
+const block     no            no
+
+let name = "Dhartishah";
+const age = 25;
+var city = "Mumbai";
+
+3. Operators
+- Arithmetic: + - * / % ++ --
+- Comparison: == === != !== > < >= <=
+- Logical: && || !
+- Ternary: condition ? true : false
+
+let result = (age > 18) ? "Adult" : "Minor";
+
+4. Functions
+- Declaration: function add(a, b) { return a + b; }
+- Expression: const add = function(a, b) { return a + b; };
+- Arrow Function (ES6): const add = (a, b) => a + b;
+
+
+`;
+
+  document.getElementById("download").addEventListener("click", () => {
+    const doc = new jsPDF();
+    let lines = content.split("\n");
+    let y = 10;
+    lines.forEach(line => {
+      doc.text(line, 10, y);
+      y += 7;
+      if(y > 280) { // new page if too long
+        doc.addPage();
+        y = 10;
+      }
+    });
+    doc.save("Basic_JS_Guide.pdf");
+  });
+</script>
+
+</body>
+</html>

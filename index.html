@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JS PDF Generator</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <section class="background-img  ">
+        <header>
+            <nav class="navbar d-flex jsc">
+                <div class="logo">
+                    <img src="./assets/img/Logo.png" alt="">
+                </div>
+                <div class="navbar-list">
+                    <ul class="d-flex jsc">
+                        <li>home</li>
+                        <li>product</li>
+                        <li>promo</li>
+                        <li>about</li>
+                        <li>contact</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="container ">
+            <div class="hero-sec-text ">
+                <h1> Get Cashback up to 50%</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit error aspernatur eaque!</p>
 
-<h1>JavaScript – Basic Guide</h1>
+                <button>order now </button>
 
-<button id="download">Download PDF</button>
+            </div>
+        </main>
+    </section>
+    <section>
+        <div class="sec-two ">
+            <div class="container">
+                <h2>Our  chef</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. </p>
+                <div class="po-re">
+                    <div class="po-ab">
+                        <img src="./assets/img/SEC-TWO-VECTOR (1).png"  id="vector1" alt="">
+                    </div>
+                </div>
+            </div>
 
-<script>
-  const { jsPDF } = window.jspdf;
-
-  const content = `
-JavaScript – Basic Guide (One Day Preparation)
-
-1. Introduction
-- JavaScript (JS) is a high-level, interpreted language.
-- Runs on browser and server (Node.js).
-- Used for dynamic content, DOM manipulation, events.
-- Data Types: Number, String, Boolean, Undefined, Null, Symbol, Object.
-
-2. Variables
-Type  Scope     Reassignable  Hoisting
-var   function  yes           yes
-let   block     yes           no
-const block     no            no
-
-let name = "Dhartishah";
-const age = 25;
-var city = "Mumbai";
-
-3. Operators
-- Arithmetic: + - * / % ++ --
-- Comparison: == === != !== > < >= <=
-- Logical: && || !
-- Ternary: condition ? true : false
-
-let result = (age > 18) ? "Adult" : "Minor";
-
-4. Functions
-- Declaration: function add(a, b) { return a + b; }
-- Expression: const add = function(a, b) { return a + b; };
-- Arrow Function (ES6): const add = (a, b) => a + b;
-
-
-`;
-
-  document.getElementById("download").addEventListener("click", () => {
-    const doc = new jsPDF();
-    let lines = content.split("\n");
-    let y = 10;
-    lines.forEach(line => {
-      doc.text(line, 10, y);
-      y += 7;
-      if(y > 280) { // new page if too long
-        doc.addPage();
-        y = 10;
-      }
-    });
-    doc.save("Basic_JS_Guide.pdf");
-  });
-</script>
-
+        </div>
+    </section>
+    <section>
+        <div class="sec-three">
+            <div class="container">
+                <div class="d-flex">
+                    <div class="col-50">
+                        <img src="./assets/img/Shape.png" alt="">
+                    </div>
+                    <div class="col-50">
+                        <h2>Best Burger</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. </p>
+                        <button>order more </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
